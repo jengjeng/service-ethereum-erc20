@@ -1,0 +1,23 @@
+{
+  "name": "service-ethereum-erc20",
+  "version": "1.0.0",
+  "description": "MESG Service for Ethereum ERC20",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mesg-foundation/service-ethereum-erc20.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mesg-foundation/service-ethereum-erc20/issues"
+  },
+  "homepage": "https://github.com/mesg-foundation/service-ethereum-erc20#readme",
+  "dependencies": {
+    "mesg-js": "^1.2.1",
+    "web3": "^1.0.0-beta.34"
+  }
+}
