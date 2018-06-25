@@ -1,9 +1,10 @@
 # Service Ethereum ERC20
-MESG Service to interact with an Ethereum ERC20 token
+MESG Service to interact with an Ethereum ERC20 token using [Infura's](https://infura.io/) websocket.
 
 # Installation
 
-This is a generic service for any ERC20 compliant token using [MESG Core](https://github.com/mesg-foundation/core).
+This is a generic service to interact with any ERC20 compliant token using [MESG Core](https://github.com/mesg-foundation/core).
+
 You need to download this repository and update the file `config.json`.
 
 ## Download
