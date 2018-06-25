@@ -162,7 +162,7 @@ Output when the task executes with success.
 
 #### Error
 
-Output key: `error`
+**Output key: `error`**
 
 Output when an error occurs.
 
