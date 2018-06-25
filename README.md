@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://cdn.rawgit.com/mesg-foundation/service-ethereum-erc20/master/logo.svg" alt="MESG Service Ethereum ERC20" height="120">
+  <img src="https://cdn.rawgit.com/mesg-foundation/service-ethereum-erc20/484d040a/logo.svg" alt="MESG Service Ethereum ERC20" height="120">
   <br/><br/>
 </p>
 
