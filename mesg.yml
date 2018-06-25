@@ -2,65 +2,125 @@ name: "Ethereum ERC20 token"
 description: "MESG Service to interact with an Ethereum ERC20 token"
 events:
   approval:
+    name: "Approval"
+    description: "The approval event of the ERC20. This event happens when a approval occurred."
     data:
       blockNumber:
+        name: "Block number"
+        description: "Block number the associated transaction"
         type: Number
       transactionHash:
+        name: "Transaction hash"
+        description: "Hash of the transaction"
         type: String
       owner:
+        name: "Owner"
+        description: "Address of the owner"
         type: String
       spender:
+        name: "Spender"
+        description: "Address of the spender"
         type: String
       value:
+        name: "Value"
+        description: "Value of the approval"
         type: Number
   transfer:
+    name: "Transfer"
+    description: "The transfer event of the ERC20. This event happens when a transfer occurred."
     data:
       blockNumber:
+        name: "Block number"
+        description: "Block number the associated transaction"
         type: Number
       transactionHash:
+        name: "Transaction hash"
+        description: "Hash of the transaction"
         type: String
       from:
+        name: "From"
+        description: "Address of the spender"
         type: String
       to:
+        name: "To"
+        description: "Address of the receiver"
         type: String
       value:
+        name: "Value"
+        description: "Value of the approval"
         type: Number
 tasks:
   totalSupply:
+    name: "Total supply"
+    description: "Get the total supply of this ERC20"
     outputs:
       success:
+        name: "Success"
+        description: "Output when success"
         data:
           totalSupply:
+            name: "Total supply"
+            description: "The total supply of this ERC20"
             type: Number
       error:
+        name: "Error"
+        description: "Output when error"
         data:
           message:
+            name: "Message"
+            description: "The error's message"
             type: String
   balanceOf:
+    name: "Balance of"
+    description: "Get the balance of a given address"
     inputs:
       address:
+        name: "Address"
+        description: "The address to get the balance from"
         type: String
     outputs:
       success:
+        name: "Success"
+        description: "Output when success"
         data:
           balance:
+            name: "Balance"
+            description: "The balance of the inputted address"
             type: Number
       error:
+        name: "Error"
+        description: "Output when error"
         data:
           message:
+            name: "Message"
+            description: "The error's message"
             type: String
   allowance:
+    name: "Allowance"
+    description: "Get the allowance between an owner and a spender"
     inputs:
       owner:
+        name: "Owner"
+        description: "The address to get the owner"
         type: String
       spender:
+        name: "Spender"
+        description: "The address to get the spender"
         type: String
     outputs:
       success:
+        name: "Success"
+        description: "Output when success"
         data:
           remaining:
+            name: 
+            description: 
             type: Number
       error:
+        name: "Error"
+        description: "Output when error"
         data:
           message:
+            name: "Message"
+            description: "The error's message"
             type: String

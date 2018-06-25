@@ -38,7 +38,11 @@ mesg-core service start
 
 # Events
 
-## transfer
+## Transfer
+
+Event key: `transfer`
+
+The transfer event of the ERC20. This event happens when a transfer occurred.
 
 | key | type | description |
 | --- | --- | --- |
@@ -48,40 +52,59 @@ mesg-core service start
 | to | String | Address of the receiver  |
 | value | Number | Value of the transfer |
 
-## approval
+## Approval
+
+Event key: `approval`
+
+The approval event of the ERC20. This event happens when a approval occurred.
 
 | key | type | description |
 | --- | --- | --- |
 | blockNumber | Number | Block number the associated transaction |
 | transactionHash | String | Hash of the transaction |
-| owner | String | Address of the spender |
+| owner | String | Address of the owner |
 | spender | String | Address of the spender  |
 | value | Number | Value of the approval |
 
 
 # Tasks
 
+## Total supply
 
-## totalSupply
+Task key: `totalSupply`
+
+Get the total supply of this ERC20
 
 ### No input
 
-### outputs
+### Outputs
 
-#### success
+#### Success
+
+Output key: `success`
+
+Output when the task executes with success.
 
 | key | type | description |
 | --- | --- | --- |
 | totalSupply | Number | The total supply of this ERC20 |
 
-#### error
+#### Error
+
+Output key: `error`
+
+Output when an error occurs.
 
 | key | type | description |
 | --- | --- | --- |
 | message | String | The error's message |
 
 
-## balanceOf
+## Balance Of
+
+Task key: `balanceOf`
+
+Get the balance of a given address.
 
 ### inputs
 
@@ -91,20 +114,32 @@ mesg-core service start
 
 ### outputs
 
-#### success
+#### Success
+
+Output key: `success`
+
+Output when the task executes with success.
 
 | key | type | description |
 | --- | --- | --- |
 | balance | Number | The balance of the inputted address |
 
-#### error
+#### Error
+
+Output key: `error`
+
+Output when an error occurs.
 
 | key | type | description |
 | --- | --- | --- |
 | message | String | The error's message |
 
 
-## allowance
+## Allowance
+
+Task key: `allowance`
+
+Get the allowance between an owner and a spender.
 
 ### inputs
 
@@ -115,13 +150,21 @@ mesg-core service start
 
 ### outputs
 
-#### success
+#### Success
+
+Output key: `success`
+
+Output when the task executes with success.
 
 | key | type | description |
 | --- | --- | --- |
 | remaining | Number | The remaining balance of the allowance |
 
-#### error
+#### Error
+
+Output key: `error`
+
+Output when an error occurs.
 
 | key | type | description |
 | --- | --- | --- |
