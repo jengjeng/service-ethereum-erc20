@@ -13,7 +13,7 @@ git clone https://github.com/mesg-foundation/service-ethereum-erc20 ./
 ```
 
 ## Update `config.json`
-```json
+```js
 {
   "erc20Address": "0xf230b790e05390fc8295f4d3f60332c93bed42e2", // Replace with the address of the ERC20 contract of you choice
   "erc20Decimal": 6, // Number of decimal of the ERC20
@@ -35,9 +35,9 @@ mesg-core service start
 
 # Definitions
 
-## Events
+# Events
 
-### transfer
+## transfer
 
 | key | type | description |
 | --- | --- | --- |
@@ -47,7 +47,7 @@ mesg-core service start
 | to | String | Address of the receiver  |
 | value | Number | Value of the transfer |
 
-### approval
+## approval
 
 | key | type | description |
 | --- | --- | --- |
@@ -58,69 +58,69 @@ mesg-core service start
 | value | Number | Value of the approval |
 
 
-## Tasks
+# Tasks
 
 
-### totalSupply
+## totalSupply
 
-#### No input
+### No input
 
-#### outputs
+### outputs
 
-##### success
+#### success
 
 | key | type | description |
 | --- | --- | --- |
 | totalSupply | Number | The total supply of this ERC20 |
 
-##### error
+#### error
 
 | key | type | description |
 | --- | --- | --- |
 | message | String | The error's message |
 
 
-### balanceOf
+## balanceOf
 
-#### inputs
+### inputs
 
 | key | type | description |
 | --- | --- | --- |
 | address | String | The address to get the balance from |
 
-#### outputs
+### outputs
 
-##### success
+#### success
 
 | key | type | description |
 | --- | --- | --- |
 | balance | Number | The balance of the inputted address |
 
-##### error
+#### error
 
 | key | type | description |
 | --- | --- | --- |
 | message | String | The error's message |
 
 
-### allowance
+## allowance
 
-#### inputs
+### inputs
 
 | key | type | description |
 | --- | --- | --- |
 | owner | String | The address to get the owner |
 | spender | String | The address to get the spender |
 
-#### outputs
+### outputs
 
-##### success
+#### success
 
 | key | type | description |
 | --- | --- | --- |
 | remaining | Number | The remaining balance of the allowance |
 
-##### error
+#### error
 
 | key | type | description |
 | --- | --- | --- |
