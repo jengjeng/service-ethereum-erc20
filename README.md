@@ -1,4 +1,10 @@
-# Service Ethereum ERC20
+<p align="center">
+  <img src="https://cdn.rawgit.com/mesg-foundation/service-ethereum-erc20/master/logo.svg" alt="MESG Service Ethereum ERC20" height="120">
+  <br/><br/>
+</p>
+
+[Website](https://mesg.com/) - [Docs](https://docs.mesg.com/) - [Chat](https://discordapp.com/invite/SaZ5HcE) - [Blog](https://medium.com/mesg)
+
 MESG Service to interact with an Ethereum ERC20 token using [Infura's](https://infura.io/) websocket.
 
 # Installation
