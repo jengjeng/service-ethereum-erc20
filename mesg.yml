@@ -1,0 +1,66 @@
+name: "Ethereum ERC20 token"
+description: "MESG Service to interact with an Ethereum ERC20 token"
+events:
+  approval:
+    data:
+      blockNumber:
+        type: Number
+      transactionHash:
+        type: String
+      owner:
+        type: String
+      spender:
+        type: String
+      value:
+        type: Number
+  transfer:
+    data:
+      blockNumber:
+        type: Number
+      transactionHash:
+        type: String
+      from:
+        type: String
+      to:
+        type: String
+      value:
+        type: Number
+tasks:
+  totalSupply:
+    outputs:
+      success:
+        data:
+          totalSupply:
+            type: Number
+      error:
+        data:
+          message:
+            type: String
+  balanceOf:
+    inputs:
+      address:
+        type: String
+    outputs:
+      success:
+        data:
+          balance:
+            type: Number
+      error:
+        data:
+          message:
+            type: String
+  allowance:
+    inputs:
+      owner:
+        type: String
+      spender:
+        type: String
+    outputs:
+      success:
+        data:
+          remaining:
+            type: Number
+      error:
+        data:
+          message:
+            type: String
