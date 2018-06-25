@@ -44,13 +44,13 @@ Event key: `transfer`
 
 The transfer event of the ERC20. This event happens when a transfer occurred.
 
-| name | key | type | description |
+| Name | Key | Type | Description |
 | --- | --- | --- | --- |
-| Block number | `blockNumber` | `Number` | Block number the associated transaction |
-| Transaction hash | `transactionHash` | `String` | Hash of the transaction |
-| From | `from` | `String` | Address of the spender |
-| To | `to` | `String` | Address of the receiver  |
-| Value | `value` | `Number` | Value of the transfer |
+| **Block number** | `blockNumber` | `Number` | Block number the associated transaction |
+| **Transaction hash** | `transactionHash` | `String` | Hash of the transaction |
+| **From** | `from` | `String` | Address of the spender |
+| **To** | `to` | `String` | Address of the receiver  |
+| **Value** | `value` | `Number` | Value of the transfer |
 
 ## Approval
 
@@ -58,13 +58,13 @@ Event key: `approval`
 
 The approval event of the ERC20. This event happens when a approval occurred.
 
-| name | key | type | description |
+| Name | Key | Type | Description |
 | --- | --- | --- | --- |
-| Block number | `blockNumber` | `Number` | Block number the associated transaction |
-| Transaction hash | `transactionHash` | `String` | Hash of the transaction |
-| Owner | `owner` | `String` | Address of the owner |
-| Spender | `spender` | `String` | Address of the spender  |
-| Value | `value` | `Number` | Value of the approval |
+| **Block number** | `blockNumber` | `Number` | Block number the associated transaction |
+| **Transaction hash** | `transactionHash` | `String` | Hash of the transaction |
+| **Owner** | `owner` | `String` | Address of the owner |
+| **Spender** | `spender` | `String` | Address of the spender  |
+| **Value** | `value` | `Number` | Value of the approval |
 
 
 # Tasks
@@ -85,9 +85,9 @@ Output key: `success`
 
 Output when the task executes with success.
 
-| name | key | type | description |
+| Name | Key | Type | Description |
 | --- | --- | --- | --- |
-| Total supply | `totalSupply` | `Number` | The total supply of this ERC20 |
+| **Total supply** | `totalSupply` | `Number` | The total supply of this ERC20 |
 
 #### Error
 
@@ -95,9 +95,9 @@ Output key: `error`
 
 Output when an error occurs.
 
-| name | key | type | description |
+| Name | Key | Type | Description |
 | --- | --- | --- | --- |
-| Message | `message` | `String` | The error's message |
+| **Message** | `message` | `String` | The error's message |
 
 
 ## Balance Of
@@ -108,9 +108,9 @@ Get the balance of a given address.
 
 ### Inputs
 
-| name | key | type | description |
+| Name | Key | Type | Description |
 | --- | --- | --- | --- |
-| Address | `address` | `String` | The address to get the balance from |
+| **Address** | `address` | `String` | The address to get the balance from |
 
 ### Outputs
 
@@ -120,9 +120,9 @@ Output key: `success`
 
 Output when the task executes with success.
 
-| name | key | type | description |
+| Name | Key | Type | Description |
 | --- | --- | --- | --- |
-| Balance | `balance` | `Number` | The balance of the inputted address |
+| **Balance** | `balance` | `Number` | The balance of the inputted address |
 
 #### Error
 
@@ -130,9 +130,9 @@ Output key: `error`
 
 Output when an error occurs.
 
-| name | key | type | description |
+| Name | Key | Type | Description |
 | --- | --- | --- | --- |
-| Message | `message` | `String` | The error's message |
+| **Message** | `message` | `String` | The error's message |
 
 
 ## Allowance
@@ -143,10 +143,10 @@ Get the allowance between an owner and a spender.
 
 ### Inputs
 
-| name | key | type | description |
+| Name | Key | Type | Description |
 | --- | --- | --- | --- |
-| Owner | `owner` | `String` | The address to get the owner |
-| Spender | `spender` | `String` | The address to get the spender |
+| **Owner** | `owner` | `String` | The address to get the owner |
+| **Spender** | `spender` | `String` | The address to get the spender |
 
 ### Outputs
 
@@ -156,9 +156,9 @@ Output key: `success`
 
 Output when the task executes with success.
 
-| name | key | type | description |
+| Name | Key | Type | Description |
 | --- | --- | --- | --- |
-| Remaining | `remaining` | `Number` | The remaining balance of the allowance |
+| **Remaining** | `remaining` | `Number` | The remaining balance of the allowance |
 
 #### Error
 
@@ -166,6 +166,6 @@ Output key: `error`
 
 Output when an error occurs.
 
-| name | key | type | description |
+| Name | Key | Type | Description |
 | --- | --- | --- | --- |
-| Message | `message` | `String` | The error's message |
+| **Message** | `message` | `String` | The error's message |
