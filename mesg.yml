@@ -113,8 +113,8 @@ tasks:
         description: "Output when success"
         data:
           remaining:
-            name: 
-            description: 
+            name: "Remaining"
+            description: "The remaining balance of the allowance"
             type: Number
       error:
         name: "Error"
