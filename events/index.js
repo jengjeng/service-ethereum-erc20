@@ -28,7 +28,7 @@ module.exports = ({
       previousBN = shiftedBN - 1
     }
     if (shiftedBN > previousBN) {
-      console.log('new block', shiftedBN, 'previous', previousBN)
+      console.log('new block', shiftedBN)
       await fetchEvent(previousBN, shiftedBN)
       previousBN = shiftedBN
     }
