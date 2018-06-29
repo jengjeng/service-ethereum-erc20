@@ -7,37 +7,49 @@
 
 MESG Service to interact with an Ethereum ERC20 token using [Infura's](https://infura.io/) websocket.
 
+This is a generic service to interact with any ERC20 compliant token using [MESG Core](https://github.com/mesg-foundation/core).
+
 # Installation
 
-This is a generic service to interact with any ERC20 compliant token using [MESG Core](https://github.com/mesg-foundation/core).
+## Default installation
+
+This service is config by default for [TRON ERC20 token](https://etherscan.io/token/0xf230b790e05390fc8295f4d3f60332c93bed42e2). To use another token, please follow the [custom install guide](#custom-install).
+
+```
+mesg-core service deploy https://github.com/mesg-foundation/service-ethereum-erc20
+```
+
+## Custom install
 
 You need to download this repository and update the file `config.json` to set the ERC20 config you need.
 
-## Download
+### Download
 
 ```
 git clone https://github.com/mesg-foundation/service-ethereum-erc20 ./
 ```
 
-## Update `config.json`
+### Update `config.json`
+
 ```js
 {
   "erc20Address": "0xf230b790e05390fc8295f4d3f60332c93bed42e2", // Replace with the address of the ERC20 contract of you choice
   "erc20Decimal": 6, // Number of decimal of the ERC20
-  "infuraEndpoint": "wss://mainnet.infura.io/_ws" // Infura websocket endpoint. If you have any problem, try "wss://mainnet.infura.io/ws"
+  "blockConfirmations": 4, // Number of block confirmation
+  "infuraEndpoint": "https://mainnet.infura.io/",
 }
 ```
-By default, `config.json` contains the data of the [TRON ERC20 contract](https://etherscan.io/token/0xf230b790e05390fc8295f4d3f60332c93bed42e2).
 
-## Test it
+### Test it
+
 ```
 mesg-core service test
 ```
 
-## Deploy and start the service
+### Deploy the service
+
 ```
 mesg-core service deploy
-mesg-core service start
 ```
 
 # Definitions
