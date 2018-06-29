@@ -15,10 +15,7 @@ module.exports = ({
 
   const handleEvent = ({eventKey, ethereumName, parseEvent}) => async filter => {
     const events = await erc20.getPastEvents(ethereumName, filter)
-    var i = 0
-    for (i = 0; i < events.length; i++) {
-      const event = events[i]
-      console.log('eventKey', event.transactionHash)
+    for (const event of events) {
       await MESG.emitEvent(eventKey, defaultPayload(event, parseEvent(event)))
     }
   }
@@ -31,7 +28,7 @@ module.exports = ({
       previousBN = shiftedBN - 1
     }
     if (shiftedBN > previousBN) {
-      console.log('new block - previous', previousBN, 'last', lastBN, 'shifted', shiftedBN)
+      console.log('new block', shiftedBN, 'previous', previousBN)
       await fetchEvent(previousBN, shiftedBN)
       previousBN = shiftedBN
     }
@@ -43,10 +40,7 @@ module.exports = ({
       fromBlock: previousBN + 1,
       toBlock: lastBN
     }
-    console.log('will fetch events with filter', filter)
-    var i = 0
-    for (i = 0; i < eventsToHandle.length; i++) {
-      const eventToHandle = eventsToHandle[i]
+    for (const eventToHandle of eventsToHandle) {
       await handleEvent(eventToHandle)(filter)
     }
   }
