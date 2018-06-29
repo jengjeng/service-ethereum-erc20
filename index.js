@@ -13,10 +13,13 @@ const dep = { MESG, web3, convertValue, reportError, erc20, blockConfirmations }
 
 // Start events listeners
 const eventsHandler = require('./events')
-eventsHandler(dep, [
-  require('./events/transfer'),
-  require('./events/approval')
-])
+eventsHandler({
+  ...dep,
+  eventsToHandle: [
+    require('./events/transfer'),
+    require('./events/approval')
+  ]
+})
 
 // Listen for tasks
 MESG.listenTask({

@@ -6,7 +6,7 @@ module.exports = ({
   return erc20.methods.allowance(owner, spender).call()
     .then(remaining => {
       remaining = convertValue(remaining)
-      console.log('remaining allowance between', owner, "and", spender, "is", remaining)
+      console.log('remaining allowance between', owner, 'and', spender, 'is', remaining)
       return success({remaining})
     })
     .catch(err => {

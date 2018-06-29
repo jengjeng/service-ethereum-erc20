@@ -3,8 +3,9 @@ module.exports = ({
   web3,
   convertValue,
   erc20,
-  blockConfirmations
-}, eventsToHandle) => {
+  blockConfirmations,
+  eventsToHandle
+}) => {
   const defaultPayload = (event, data) => ({
     blockNumber: event.blockNumber,
     transactionHash: event.transactionHash,
@@ -22,7 +23,7 @@ module.exports = ({
     }
   }
 
-  var previousBN = 5873289
+  var previousBN
   const pollingBlockNumber = async () => {
     const lastBN = await web3.eth.getBlockNumber()
     const shiftedBN = lastBN - blockConfirmations
