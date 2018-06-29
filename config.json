@@ -1,5 +1,6 @@
 {
   "erc20Address": "0xf230b790e05390fc8295f4d3f60332c93bed42e2",
   "erc20Decimal": 6,
-  "infuraEndpoint": "wss://mainnet.infura.io/ws"
+  "infuraEndpoint": "https://mainnet.infura.io/",
+  "blockConfirmations": 4
 }

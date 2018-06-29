@@ -1,10 +1,8 @@
 module.exports = ({
-  erc20,
-}) => ({
   eventKey: 'transfer',
-  listener: erc20.events.Transfer({fromBlock: 'latest'}),
+  ethereumName: 'Transfer',
   parseEvent: event => ({
     from: event.returnValues.from,
-    to: event.returnValues.to,
-  }),
+    to: event.returnValues.to
+  })
 })
