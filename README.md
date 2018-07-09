@@ -13,7 +13,7 @@ This is a generic service to interact with any ERC20 compliant token using [MESG
 
 ## Default installation
 
-This service is configurated by default for [TRON ERC20 tokens](https://etherscan.io/token/0xf230b790e05390fc8295f4d3f60332c93bed42e2). To use another token, please follow the [custom install guide](#custom-install).
+This service is configurated by default for [TRON ERC20 tokens](https://etherscan.io/token/0xf230b790e05390fc8295f4d3f60332c93bed42e2). To use another token, please follow the [custom installation guide](#custom-install).
 
 ```
 mesg-core service deploy https://github.com/mesg-foundation/service-ethereum-erc20
