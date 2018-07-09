@@ -13,7 +13,7 @@ This is a generic service to interact with any ERC20 compliant token using [MESG
 
 ## Default installation
 
-This service is config by default for [TRON ERC20 token](https://etherscan.io/token/0xf230b790e05390fc8295f4d3f60332c93bed42e2). To use another token, please follow the [custom install guide](#custom-install).
+This service is configurated by default for [TRON ERC20 tokens](https://etherscan.io/token/0xf230b790e05390fc8295f4d3f60332c93bed42e2). To use another token, please follow the [custom install guide](#custom-install).
 
 ```
 mesg-core service deploy https://github.com/mesg-foundation/service-ethereum-erc20
@@ -33,7 +33,7 @@ git clone https://github.com/mesg-foundation/service-ethereum-erc20 ./
 
 ```js
 {
-  "erc20Address": "0xf230b790e05390fc8295f4d3f60332c93bed42e2", // Replace with the address of the ERC20 contract of you choice
+  "erc20Address": "0xf230b790e05390fc8295f4d3f60332c93bed42e2", // Replace with the address of the ERC20 contract of your choice
   "erc20Decimal": 6, // Number of decimal of the ERC20
   "blockConfirmations": 4, // Number of block confirmation
   "infuraEndpoint": "https://mainnet.infura.io/",
@@ -60,7 +60,7 @@ mesg-core service deploy
 
 Event key: `transfer`
 
-The transfer event of the ERC20. This event happens when a transfer occurred.
+The transfer event of the ERC20. This event happens when a transfer occurs.
 
 | Name | Key | Type | Description |
 | --- | --- | --- | --- |
@@ -74,7 +74,7 @@ The transfer event of the ERC20. This event happens when a transfer occurred.
 
 Event key: `approval`
 
-The approval event of the ERC20. This event happens when a approval occurred.
+The approval event of the ERC20. This event happens when an approval occurs.
 
 | Name | Key | Type | Description |
 | --- | --- | --- | --- |
@@ -101,7 +101,7 @@ Get the total supply of this ERC20
 
 Output key: `success`
 
-Output when the task executes with success.
+Output when the task executes successfully.
 
 | Name | Key | Type | Description |
 | --- | --- | --- | --- |
@@ -136,7 +136,7 @@ Get the balance of a given address.
 
 Output key: `success`
 
-Output when the task executes with success.
+Output when the task executes successfully.
 
 | Name | Key | Type | Description |
 | --- | --- | --- | --- |
@@ -172,7 +172,7 @@ Get the allowance between an owner and a spender.
 
 Output key: `success`
 
-Output when the task executes with success.
+Output when the task executes successfully.
 
 | Name | Key | Type | Description |
 | --- | --- | --- | --- |
@@ -186,4 +186,4 @@ Output when an error occurs.
 
 | Name | Key | Type | Description |
 | --- | --- | --- | --- |
-| **Message** | `message` | `String` | The error's message |
+| **Message** | `message` | `String` | The error message |
