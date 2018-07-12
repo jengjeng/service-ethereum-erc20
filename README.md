@@ -37,6 +37,7 @@ git clone https://github.com/mesg-foundation/service-ethereum-erc20 ./
   "erc20Decimal": 6, // Number of decimal of the ERC20
   "blockConfirmations": 4, // Number of block confirmation
   "infuraEndpoint": "https://mainnet.infura.io/",
+  "defaultGasLimit": 50000
 }
 ```
 
