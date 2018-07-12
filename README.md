@@ -187,3 +187,125 @@ Output when an error occurs.
 | Name | Key | Type | Description |
 | --- | --- | --- | --- |
 | **Message** | `message` | `String` | The error message |
+
+
+## Approve
+
+Task key: `approve`
+
+Authorize a future transfer from
+
+### Inputs
+
+| Name | **Key** | **Type** | **Description** |
+| --- | --- | --- | --- |
+| **Gas Limit** | `gasLimit` | `Number` | The maximum gas provided for this transaction |
+| **Gas Price** | `gasPrice` | `String` | The gas price in wei to use for this transaction |
+| **Private Key** | `privateKey` | `String` | The private key to sign the transaction |
+| **Spender** | `spender` | `String` | The address to authorize to transfer to |
+| **Value** | `value` | `Number` | The number of token to authorize to transfer |
+
+
+### Outputs
+
+#### Error
+
+Output key: `error`
+
+Output when error
+
+| Name | **Key** | **Type** | **Description** |
+| --- | --- | --- | --- |
+| **Message** | `message` | `String` | The error&#39;s message |
+
+#### Success
+
+Output key: `success`
+
+Output when success
+
+| Name | **Key** | **Type** | **Description** |
+| --- | --- | --- | --- |
+| **Transaction Hash** | `transactionHash` | `String` | Hash of the transaction |
+
+
+## Transfer
+
+Task key: `transfer`
+
+Transfer tokens to an address
+
+### Inputs
+
+| Name | **Key** | **Type** | **Description** |
+| --- | --- | --- | --- |
+| **Gas Limit** | `gasLimit` | `Number` | The maximum gas provided for this transaction |
+| **Gas Price** | `gasPrice` | `String` | The gas price in wei to use for this transaction |
+| **Private Key** | `privateKey` | `String` | The private key to sign the transaction |
+| **To** | `to` | `String` | The address to transfer the token to |
+| **Value** | `value` | `Number` | The number of tokens to transfer |
+
+
+### Outputs
+
+#### Error
+
+Output key: `error`
+
+Output when error
+
+| Name | **Key** | **Type** | **Description** |
+| --- | --- | --- | --- |
+| **Message** | `message` | `String` | The error&#39;s message |
+
+#### Success
+
+Output key: `success`
+
+Output when success
+
+| Name | **Key** | **Type** | **Description** |
+| --- | --- | --- | --- |
+| **Transaction Hash** | `transactionHash` | `String` | Hash of the transaction |
+
+
+## Transfer From
+
+Task key: `transferFrom`
+
+Transfer tokens from an approved address
+
+### Inputs
+
+| Name | **Key** | **Type** | **Description** |
+| --- | --- | --- | --- |
+| **from** | `from` | `String` | The address to get the tokens from |
+| **Gas Limit** | `gasLimit` | `Number` | The maximum gas provided for this transaction |
+| **Gas Price** | `gasPrice` | `String` | The gas price in wei to use for this transaction |
+| **Private Key** | `privateKey` | `String` | The private key to sign the transaction |
+| **To** | `to` | `String` | The address to transfer the tokens to |
+| **Value** | `value` | `Number` | The number of token to transfer |
+
+
+### Outputs
+
+#### Error
+
+Output key: `error`
+
+Output when error
+
+| Name | **Key** | **Type** | **Description** |
+| --- | --- | --- | --- |
+| **Message** | `message` | `String` | The error&#39;s message |
+
+#### Success
+
+Output key: `success`
+
+Output when success
+
+| Name | **Key** | **Type** | **Description** |
+| --- | --- | --- | --- |
+| **Transaction Hash** | `transactionHash` | `String` | Hash of the transaction |
+

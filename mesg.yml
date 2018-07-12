@@ -124,3 +124,84 @@ tasks:
             name: "Message"
             description: "The error's message"
             type: String
+  transfer:
+    name: "Transfer"
+    description: "Transfer tokens to an address"
+    inputs:
+      to:
+        name: "To"
+        description: "The address to transfer the token to"
+        type: String
+      value:
+        name: "Value"
+        description: "The number of tokens to transfer"
+        type: Number
+      privateKey: &privateKeyInput
+        name: "Signer private key"
+        description: "The private key to sign the transaction"
+        type: String
+      gasPrice: &gasPriceInput
+        name: "Gas Price"
+        description: "The gas price in wei to use for this transaction"
+        type: String
+        optional: true
+      gasLimit: &gasLimitInput
+        name: "Gas Limit"
+        description: "The maximum gas provided for this transaction"
+        type: Number
+        optional: true
+    outputs: &signedTransactionOutputs
+      success:
+        name: "Success"
+        description: "Output when success"
+        data:
+          transactionHash:
+            name: "Transaction hash"
+            description: "Hash of the transaction"
+            type: String
+      error:
+        name: "Error"
+        description: "Output when error"
+        data:
+          message:
+            name: "Message"
+            description: "The error's message"
+            type: String
+  approve:
+    name: "Approve"
+    description: "Authorize a future transfer from"
+    inputs:
+      spender:
+        name: "Spender"
+        description: "The address to authorize to transfer to"
+        type: String
+      value:
+        name: "Value"
+        description: "The number of token to authorize to transfer"
+        type: Number
+      privateKey: *privateKeyInput
+      gasPrice: *gasPriceInput
+      gasLimit: *gasLimitInput
+    outputs:
+      <<: *signedTransactionOutputs
+  transferFrom:
+    name: "Transfer From"
+    description: "Transfer tokens from an approved address"
+    inputs:
+      from:
+        name: "From"
+        description: "The address to get the tokens from"
+        type: String
+      to:
+        name: "To"
+        description: "The address to transfer the tokens to"
+        type: String
+      value:
+        name: "Value"
+        description: "The number of token to transfer"
+        type: Number
+      privateKey: *privateKeyInput
+      gasPrice: *gasPriceInput
+      gasLimit: *gasLimitInput
+    outputs:
+      <<: *signedTransactionOutputs

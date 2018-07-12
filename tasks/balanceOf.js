@@ -1,6 +1,5 @@
 module.exports = ({
   convertValue,
-  reportError,
   erc20
 }) => ({ address }, { success, error }) => {
   return erc20.methods.balanceOf(address).call()
@@ -10,7 +9,7 @@ module.exports = ({
       return success({balance})
     })
     .catch(err => {
-      reportError(err)
+      console.error(err)
       return error({message: err.toString()})
     })
 }

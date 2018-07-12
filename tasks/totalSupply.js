@@ -1,6 +1,5 @@
 module.exports = ({
   convertValue,
-  reportError,
   erc20
 }) => (_, { success, error }) => {
   return erc20.methods.totalSupply().call()
@@ -10,7 +9,7 @@ module.exports = ({
       return success({totalSupply})
     })
     .catch(err => {
-      reportError(err)
+      console.error(err)
       return error({message: err.toString()})
     })
 }

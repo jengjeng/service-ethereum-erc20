@@ -1,6 +1,5 @@
 module.exports = ({
   convertValue,
-  reportError,
   erc20
 }) => ({ owner, spender }, { success, error }) => {
   return erc20.methods.allowance(owner, spender).call()
@@ -10,7 +9,7 @@ module.exports = ({
       return success({remaining})
     })
     .catch(err => {
-      reportError(err)
+      console.error(err)
       return error({message: err.toString()})
     })
 }
