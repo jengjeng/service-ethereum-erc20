@@ -2,8 +2,8 @@ module.exports = ({
   erc20,
   web3,
   defaultGasLimit
-}) => (method) => async (inputs, { success, error }) => {
-  try {
+}) => (method) => async (inputs) => {
+  return new Promise(async (resolve, reject) => {
     const { privateKey, gasPrice, gasLimit } = inputs
     const account = web3.eth.accounts.privateKeyToAccount(privateKey)
     const signedTransaction = await account.signTransaction({
@@ -14,17 +14,13 @@ module.exports = ({
       value: 0, // force to 0 ETH
       data: method(inputs)
     })
-    await web3.eth.sendSignedTransaction(signedTransaction.rawTransaction)
+    web3.eth.sendSignedTransaction(signedTransaction.rawTransaction)
       .on('transactionHash', transactionHash => {
         console.log('transactionHash', transactionHash)
-        return success({ transactionHash })
+        return resolve({ transactionHash })
       })
       .on('error', err => {
-        console.error('err2', err)
-        return error({ message: err.toString() })
+        return reject(err)
       })
-  } catch (err) {
-    console.error('err1', err)
-    return error({ message: err.toString() })
-  }
+  })
 }

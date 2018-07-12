@@ -26,7 +26,7 @@ You need to download this repository and update the file `config.json` to set th
 ### Download
 
 ```
-git clone https://github.com/mesg-foundation/service-ethereum-erc20 ./
+git clone https://github.com/mesg-foundation/service-ethereum-erc20
 ```
 
 ### Update `config.json`
