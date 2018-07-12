@@ -3,5 +3,5 @@
   "erc20Decimal": 6,
   "infuraEndpoint": "https://mainnet.infura.io/",
   "blockConfirmations": 4,
-  "defaultGasLimit": 50000
+  "defaultGasLimit": 100000
 }
