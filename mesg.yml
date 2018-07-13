@@ -25,6 +25,10 @@ events:
         name: "Value"
         description: "Value of the approval"
         type: Number
+      contractAddress: &contractAddressParam
+        name: "Contract address"
+        description: "The address of the contract"
+        type: String
   transfer:
     name: "Transfer"
     description: "The transfer event of the ERC20. This event happens when a transfer occurred."
@@ -49,10 +53,13 @@ events:
         name: "Value"
         description: "Value of the approval"
         type: Number
+      contractAddress: *contractAddressParam
 tasks:
   totalSupply:
     name: "Total supply"
     description: "Get the total supply of this ERC20"
+    inputs:
+      contractAddress: *contractAddressParam
     outputs:
       success:
         name: "Success"
@@ -78,6 +85,7 @@ tasks:
         name: "Address"
         description: "The address to get the balance from"
         type: String
+      contractAddress: *contractAddressParam
     outputs:
       success:
         name: "Success"
@@ -107,6 +115,7 @@ tasks:
         name: "Spender"
         description: "The address to get the spender"
         type: String
+      contractAddress: *contractAddressParam
     outputs:
       success:
         name: "Success"
@@ -136,6 +145,7 @@ tasks:
         name: "Value"
         description: "The number of tokens to transfer"
         type: Number
+      contractAddress: *contractAddressParam
       privateKey: &privateKeyInput
         name: "Signer private key"
         description: "The private key to sign the transaction"
@@ -179,6 +189,7 @@ tasks:
         name: "Value"
         description: "The number of token to authorize to transfer"
         type: Number
+      contractAddress: *contractAddressParam
       privateKey: *privateKeyInput
       gasPrice: *gasPriceInput
       gasLimit: *gasLimitInput
@@ -200,6 +211,7 @@ tasks:
         name: "Value"
         description: "The number of token to transfer"
         type: Number
+      contractAddress: *contractAddressParam
       privateKey: *privateKeyInput
       gasPrice: *gasPriceInput
       gasLimit: *gasLimitInput
