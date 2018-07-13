@@ -1,9 +1,8 @@
 module.exports = ({
-  convertValue,
-  erc20
-}) => async ({ owner, spender }) => {
-  var remaining = await erc20.methods.allowance(owner, spender).call()
-  remaining = convertValue(remaining)
+  convertValue
+}) => async (contract, { owner, spender }) => {
+  var remaining = await contract.methods.allowance(owner, spender).call()
+  remaining = await convertValue(remaining, contract)
   console.log('remaining allowance between', owner, 'and', spender, 'is', remaining)
   return { remaining }
 }

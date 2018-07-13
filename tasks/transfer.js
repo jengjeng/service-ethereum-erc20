@@ -1,4 +1,3 @@
 module.exports = ({
-  convertToValue,
-  erc20
-}) => ({ to, value }) => erc20.methods.transfer(to, convertToValue(value)).encodeABI()
+  convertToValue
+}) => async (contract, { to, value }) => contract.methods.transfer(to, await convertToValue(value, contract)).encodeABI()
