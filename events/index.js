@@ -35,12 +35,19 @@ module.exports = ({
       topics: [Object.keys(eventConfigs)]
     })
     for (const log of logs) {
+      const { topics, data, transactionHash } = log
       try {
-        const { abi, parseEvent, eventKey } = eventConfigs[log.topics[0]]
-        const event = web3.eth.abi.decodeLog(abi.inputs, log.data, log.topics)
+        const topic = topics[0]
+        const { abi, parseEvent, eventKey } = eventConfigs[topic]
+        if (abi.anonymous === false) {
+          // Remove first element because event is non-anonymous
+          // https://web3js.readthedocs.io/en/1.0/web3-eth-abi.html#decodelog
+          topics.splice(0, 1)
+        }
+        const event = web3.eth.abi.decodeLog(abi.inputs, data, topics)
         await MESG.emitEvent(eventKey, await defaultPayload(log, event, parseEvent(event)))
       } catch (err) {
-        console.error('error with transaction', log.transactionHash, err.toString())
+        console.error('error with transaction', transactionHash, err.toString())
       }
     }
   }
