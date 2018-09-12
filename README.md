@@ -5,13 +5,17 @@
 
 [Website](https://mesg.com/) - [Docs](https://docs.mesg.com/) - [Chat](https://discordapp.com/invite/SaZ5HcE) - [Blog](https://medium.com/mesg)
 
-MESG Service to interact with an Ethereum ERC20 token using [Infura's](https://infura.io/) websocket.
+MESG Service to interact with an Ethereum ERC20 token using [Infura's](https://infura.io/).
+
+ERC20 Def: https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md
 
 This is a generic service to interact with any ERC20 compliant token using [MESG Core](https://github.com/mesg-foundation/core).
 
 # Installation
 
 ## Default installation
+
+This service is configurated to use 
 
 This service is configurated by default for [TRON ERC20 tokens](https://etherscan.io/token/0xf230b790e05390fc8295f4d3f60332c93bed42e2). To use another token, please follow the [custom installation guide](#custom-install).
 

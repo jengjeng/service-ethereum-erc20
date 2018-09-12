@@ -1,5 +1,15 @@
 name: "Ethereum ERC20 token"
 description: "MESG Service to interact with an Ethereum ERC20 token"
+configuration:
+  volumes:
+    - "/tmp"
+  volumesfrom:
+    - nginx
+dependencies:
+  nginx:
+    image: nginx
+    volumes:
+      - "/nginx-shared"
 events:
   approval:
     name: "Approval"
