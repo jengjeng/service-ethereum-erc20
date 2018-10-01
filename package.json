@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/mesg-foundation/service-ethereum-erc20#readme",
   "dependencies": {
+    "bignumber.js": "^7.2.1",
     "mesg-js": "^1.2.1",
     "web3": "^1.0.0-beta.34"
   }

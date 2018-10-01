@@ -8,6 +8,7 @@ const {
   defaultGasLimit
 } = require('./config.json')
 const erc20ABI = require('./erc20-abi.json')
+const BigNumber = require('bignumber.js')
 
 const web3 = new Web3(infuraEndpoint)
 const erc20 = new web3.eth.Contract(erc20ABI, erc20Address)
@@ -15,8 +16,8 @@ const erc20 = new web3.eth.Contract(erc20ABI, erc20Address)
 const BN = web3.utils.toBN
 const decimalBN = BN(10).pow(BN(erc20Decimal))
 
-const convertValue = value => BN(value).div(decimalBN).toString(10)
-const convertToValue = value => BN(value).mul(decimalBN)
+const convertValue = value => BigNumber(value).dividedBy(decimalBN).toString(10)
+const convertToValue = value => BigNumber(value).multipliedBy(decimalBN)
 const dep = { MESG, web3, erc20, convertValue, convertToValue, blockConfirmations, defaultGasLimit }
 const tasksHandler = require('./tasks')
 const signTxHandler = require('./tasks/signTxHandler')(dep)
