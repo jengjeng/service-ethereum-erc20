@@ -24,7 +24,7 @@ events:
       value:
         name: "Value"
         description: "Value of the approval"
-        type: Number
+        type: String
   transfer:
     name: "Transfer"
     description: "The transfer event of the ERC20. This event happens when a transfer occurred."
@@ -48,7 +48,7 @@ events:
       value:
         name: "Value"
         description: "Value of the approval"
-        type: Number
+        type: String
 tasks:
   totalSupply:
     name: "Total supply"
